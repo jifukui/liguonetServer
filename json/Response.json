@@ -1,0 +1,17 @@
+{
+    "status":"success",
+    "data":
+    [
+        
+    ],
+    "error":
+    {
+        "errortype":"123456",
+        "errorstring":{
+            "cn":"不支持的命令",
+            "en":"123465498"
+        }
+    },
+    "responseID":"123456",
+    "timestamp":"123456789123"
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Cookie</title>
+    <script src="jquery-3.3.1.js"></script>
+    <script>
+        var RemPassword=function(){
+            console.log("记住密码");
+            var check=document.getElementById("rempassword").checked;
+            console.log("The status of checkbox "+ check);
+            var testdata={};
+            var test;
+            if(check)
+            {
+                var storage=window.localStorage;
+                if(storage)
+                {
+                    console.log("support localstorage");
+                    testdata.username=document.getElementById('name').value;
+                    testdata.password=document.getElementById('password').value;
+                    if(storage.liguo)
+                    {
+                        test=JSON.parse(storage.liguo);
+                        var index=-1;
+                        var i=0;
+                        for(i=0;i<test.length;i++)
+                        {
+                            //console.log(tets[i]+" i is ");
+                            if(test[i].username==testdata.username)
+                            {
+                                index=i;
+                                console.log("The i is "+i);
+                            }
+                        }
+                        if(index!=-1)
+                        {
+                           test.splice(index,1);
+                        }
+                    }
+                    else
+                    {
+                        test=[];
+                    }
+                    test.unshift(testdata);
+                    console.log("The value is "+JSON.stringify(test));
+                    storage.liguo=JSON.stringify(test);
+                }
+                else
+                {
+                    console.log("Unsupport localstorage");
+                }
+            }
+            else
+            {
+                console.log("Unsupport localstorage");
+            }
+
+        }
+        var SetCookie=function () {
+            var a=document.getElementById('name').value;
+            var b=document.getElementById('password').value;
+            var value={};
+            value.name=a;
+            value.password=b;
+            $.ajax({
+                type: 'post',
+                url: '/login',
+                data: value,
+                dataType: 'json',
+                success: function (msg) {
+                    if (msg.status == "successful") {
+                        $.ajax({
+                            type: 'get',
+                            url: "index.html",
+                            dataType: 'html',
+                            success:function (strvalue) {
+                                $('body').html(strvalue);
+                            }
+                        })
+                    }
+                    else {
+                        alert("error");
+                    }
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+<div>
+    <input type="text" readonly value="Name" ><input type="text" id="name">
+</div>
+<div>
+    <input type="text" readonly value="Password" ><input type="password" id="password">
+</div>
+<div>
+    <input type="checkbox" value="记住密码" id="rempassword" onclick="RemPassword()" autocomplete="off">
+</div>
+<div>
+    <input type="button" value="登录" onclick="SetCookie()"  >
+</div>
+
+<script>
+    
+
+(function test()
+{
+    var storage=window.localStorage;
+    if(storage)
+    {
+        if(storage.liguo)
+        {
+            var test=JSON.parse(storage.liguo);
+            document.getElementById('name').value=test[0].username;
+            document.getElementById('password').value=test[0].password;
+        }
+        else
+        {
+
+        }
+    }
+    
+})()
+</script>
+</body>
+</html>

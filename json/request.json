@@ -1,0 +1,425 @@
+{
+    "Authentication":
+    {
+        "UserName":"admin",
+        "SessionId":"1234567891234"
+    },
+    "data":[
+        {
+            "ComamndType":"get/set/up/down/Authentication",
+            "CommandData":{
+                "CommandName":"User",
+                "CommandData":""
+            }
+        },
+        {
+            "ComamndType":"get/set/up/down/Authentication",
+            "CommandData":{
+                "CommandName":"VID",
+                "CommandData":"1>2"
+            }
+        }
+    ],
+    "Protocol":
+    {
+        "Name":"liguoNetWork",
+        "Version":"1.0.0"   
+    },
+    "JSON":
+    {
+        "Version":"1.0.0"
+    },
+    "datalen":2,
+    "request":"123456",
+    "timestamp":"1234567891234"
+}
+
+{
+    "Authentication":
+    {
+        "UserName":"admin",
+        "SessionId":"1234567891234"
+    },
+    "data":[
+        {
+            "CommandType":"get",
+            "CommandData":{
+                "CommandName":"DeviceInfo",
+                "key":"0C54A505AC1E00000000000001",
+                "ModuleName":"VS-88UHDA"
+            }
+        }
+    ],
+    "Protocol":
+    {
+        "Name":"liguoNetWork",
+        "Version":"1.0.0"   
+    },
+    "JSON":
+    {
+        "Version":"1.0.0"
+    },
+    "datalen":1,
+    "request":"123456",
+    "timestamp":"1234567891234"
+}
+//dhcp
+{
+    "Authentication":
+    {
+        "UserName":"admin",
+        "SessionId":"1234567891234"
+    },
+    "data":[
+        {
+            "CommandType":"set",
+            "CommandData":{
+                "CommandName":"DHCP",
+                "key":"0C54A505AC1E00000000000001",
+                "DHCP":"on/off"
+            }
+        }
+    ],
+    "Protocol":
+    {
+        "Name":"liguoNetWork",
+        "Version":"1.0.0"   
+    },
+    "JSON":
+    {
+        "Version":"1.0.0"
+    },
+    "datalen":1,
+    "request":"123456",
+    "timestamp":"1234567891234"
+}
+//network
+{
+    "Authentication":
+    {
+        "UserName":"admin",
+        "SessionId":"1234567891234"
+    },
+    "data":[
+        {
+            "CommandType":"set",
+            "CommandData":{
+                "CommandName":"network",
+                "key":"0C54A505AC1E00000000000001",
+                "network":{
+                    "ip":"192.168.20.123",
+                    "mask":"255.255.255.192",
+                    "gateway":"192.168.20.111",
+                    "TCP":5001,
+                    "UDP":50001
+                }
+            }
+        }
+    ],
+    "Protocol":
+    {
+        "Name":"liguoNetWork",
+        "Version":"1.0.0"   
+    },
+    "JSON":
+    {
+        "Version":"1.0.0"
+    },
+    "datalen":1,
+    "request":"123456",
+    "timestamp":"1234567891234"
+}
+//EDID
+{
+    "Authentication":
+    {
+        "UserName":"admin",
+        "SessionId":"1234567891234"
+    },
+    "data":[
+        {
+            "CommandType":"set",
+            "CommandData":{
+                "CommandName":"RoutEDID",
+                "key":"0C54A505AC1E00000000000001",
+                "EDID":{
+                    "mode":"IN/OUT/Default/File",
+                    "In":1,
+                    "Out":[8,9,10,11,12,13,14],
+                    "data":"xxxxxxxxxxxxxxxxxxxxxxxx",
+                    "set":"0/1/2/3/4/5/7"
+                    //全不选 0
+                    //RGB 1
+                    //DEEP 2
+                    //2 CHANNEL 4
+
+                }
+            }
+        }
+    ],
+    "Protocol":
+    {
+        "Name":"liguoNetWork",
+        "Version":"1.0.0"   
+    },
+    "JSON":
+    {
+        "Version":"1.0.0"
+    },
+    "datalen":1,
+    "request":"123456",
+    "timestamp":"1234567891234"
+}
+通道切换
+{
+    "Authentication":
+    {
+        "UserName":"admin",
+        "SessionId":"1234567891234"
+    },
+    "data":[
+        {
+            "CommandType":"set",
+            "CommandData":{
+                "CommandName":"RoutChannal",
+                "key":"0C54A505AC1E00000000000001",
+                "data":"phyid>phyid"
+            }
+        }
+    ],
+    "Protocol":
+    {
+        "Name":"liguoNetWork",
+        "Version":"1.0.0"   
+    },
+    "JSON":
+    {
+        "Version":"1.0.0"
+    },
+    "datalen":1,
+    "request":"123456",
+    "timestamp":"1234567891234"
+}
+修改通道名称
+{
+    "Authentication":
+    {
+        "UserName":"admin",
+        "SessionId":"1234567891234"
+    },
+    "data":[
+        {
+            "CommandType":"set",
+            "CommandData":{
+                "CommandName":"ChannalName",
+                "key":"0C54A505AC1E00000000000001",
+                "channal":"phyid",
+                "name":"xxxxxx"
+            }
+        }
+    ],
+    "Protocol":
+    {
+        "Name":"liguoNetWork",
+        "Version":"1.0.0"   
+    },
+    "JSON":
+    {
+        "Version":"1.0.0"
+    },
+    "datalen":1,
+    "request":"123456",
+    "timestamp":"1234567891234"
+}
+添加宏
+{
+    "Authentication":
+    {
+        "UserName":"admin",
+        "SessionId":"1234567891234"
+    },
+    "data":[
+        {
+            "CommandType":"set",
+            "CommandData":{
+                "CommandName":"AddMacro",
+                "key":"0C54A505AC1E00000000000001",
+                "macro":{
+                    "name":"xxx",
+                    "data":["1>1001"]
+                }
+            }
+        }
+    ],
+    "Protocol":
+    {
+        "Name":"liguoNetWork",
+        "Version":"1.0.0"   
+    },
+    "JSON":
+    {
+        "Version":"1.0.0"
+    },
+    "datalen":1,
+    "request":"123456",
+    "timestamp":"1234567891234"
+}
+删除宏
+{
+    "Authentication":
+    {
+        "UserName":"admin",
+        "SessionId":"1234567891234"
+    },
+    "data":[
+        {
+            "CommandType":"set",
+            "CommandData":{
+                "CommandName":"DeleteMacro",
+                "key":"0C54A505AC1E00000000000001",
+                "name":"xxxxx"
+            }
+        }
+    ],
+    "Protocol":
+    {
+        "Name":"liguoNetWork",
+        "Version":"1.0.0"   
+    },
+    "JSON":
+    {
+        "Version":"1.0.0"
+    },
+    "datalen":1,
+    "request":"123456",
+    "timestamp":"1234567891234"
+}
+运行宏
+{
+    "Authentication":
+    {
+        "UserName":"admin",
+        "SessionId":"1234567891234"
+    },
+    "data":[
+        {
+            "CommandType":"set",
+            "CommandData":{
+                "CommandName":"RunMacro",
+                "key":"0C54A505AC1E00000000000001",
+                "name":"xxxxx"
+            }
+        }
+    ],
+    "Protocol":
+    {
+        "Name":"liguoNetWork",
+        "Version":"1.0.0"   
+    },
+    "JSON":
+    {
+        "Version":"1.0.0"
+    },
+    "datalen":1,
+    "request":"123456",
+    "timestamp":"1234567891234"
+}
+修改宏
+{
+    "Authentication":
+    {
+        "UserName":"admin",
+        "SessionId":"1234567891234"
+    },
+    "data":[
+        {
+            "CommandType":"set",
+            "CommandData":{
+                "CommandName":"UpdateMacro",
+                "key":"0C54A505AC1E00000000000001",
+                "macro":{
+                    "name":"xxx",
+                    "data":["1>1001"]
+                }
+            }
+        }
+    ],
+    "Protocol":
+    {
+        "Name":"liguoNetWork",
+        "Version":"1.0.0"   
+    },
+    "JSON":
+    {
+        "Version":"1.0.0"
+    },
+    "datalen":1,
+    "request":"123456",
+    "timestamp":"1234567891234"
+}
+通道信息设置
+{
+    "Authentication":
+    {
+        "UserName":"admin",
+        "SessionId":"1234567891234"
+    },
+    "data":[
+        {
+            "CommandType":"set",
+            "CommandData":{
+                "CommandName":"ChannalInfo",
+                "key":"0C54A505AC1E00000000000001",
+                "PhyID":"1001",
+                "ChannalInfo":{
+                    "属性名":"属性值"//属性名和属性值要和传入的一致
+                }
+            }
+        }
+    ],
+    "Protocol":
+    {
+        "Name":"liguoNetWork",
+        "Version":"1.0.0"   
+    },
+    "JSON":
+    {
+        "Version":"1.0.0"
+    },
+    "datalen":1,
+    "request":"123456",
+    "timestamp":"1234567891234"
+}
+传文件
+{
+    "Authentication":
+    {
+        "UserName":"admin",
+        "SessionId":"1234567891234"
+    },
+    "data":[
+        {
+            "CommandType":"set",
+            "CommandData":{
+                "CommandName":"FileUpload",
+                "data":{
+                    "name":"",//文件名
+                    "module":"",//设备module
+                    "data":"xxxxxx"//文件数据
+                }
+            }
+        }
+    ],
+    "Protocol":
+    {
+        "Name":"liguoNetWork",
+        "Version":"1.0.0"   
+    },
+    "JSON":
+    {
+        "Version":"1.0.0"
+    },
+    "datalen":1,
+    "request":"123456",
+    "timestamp":"1234567891234"
+}

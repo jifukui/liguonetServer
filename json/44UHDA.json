@@ -1,0 +1,465 @@
+{
+    "_id" : ObjectId("5b691001ca3e251418e232f6"),
+    "key" : "0C54A505AC1E00000000000002",
+    "BaseInfo" : {
+        "ClassType" : "Pro AV",
+        "ModuleName" : "VS-44UHDA",
+        "Name" : "44UHDA_ROOM",
+        "SN" : "00000000000002",
+        "PortNum" : 16,
+        "PortInfo" : [ 
+            {
+                "Name" : "H_Video_IN",
+                "PortNum" : 4
+            }, 
+            {
+                "Name" : "H_Video_OUT",
+                "PortNum" : 4
+            }, 
+            {
+                "Name" : "H_Audio_I",
+                "PortNum" : 4
+            }, 
+            {
+                "Name" : "H_Audio_OUT",
+                "PortNum" : 4
+            }, 
+            {
+                "Name" : "A_Audio_I",
+                "PortNum" : 4
+            }, 
+            {
+                "Name" : "A_Audio_I",
+                "PortNum" : 4
+            }
+        ]
+    },
+    "network" : {
+        "mac" : "0C-54-A5-05-AC-1F",
+        "dhcp" : "off",
+        "ip" : "192.168.20.34",
+        "mask" : "255.255.192.0",
+        "gateway" : "192.168.20.111",
+        "TCP" : "5001",
+        "UDP" : "50001"
+    },
+    "Software" : {
+        "FirewareVersion" : "1.4"
+    },
+    "PortInfo" : [ 
+        {
+            "PhyIndex" : 1,
+            "PortType" : "HDMI",
+            "ChannalInfo" : [ 
+                {
+                    "SignalType" : "Video",
+                    "PhyID" : 1,
+                    "Name" : "DVD1",
+                    "HDCPMode" : "1.x",
+                    "HDCPState" : "None",
+                    "SignalStatus" : "On",
+                    "Signal" : "HDMI",
+                    "Resolution" : "1920*1080@60P",
+                    "Connected" : [ 
+                        1001, 
+                        1002, 
+                        1003
+                    ],
+                    "Mute" : "Off",
+                    "Dir" : "in"
+                }, 
+                {
+                    "SignalType" : "Audio",
+                    "PhyID" : 2001,
+                    "Name" : "DVD1_Audio",
+                    "SignalStatus" : "On",
+                    "SamplingRate" : 48,
+                    "Mute" : "Off",
+                    "ARCAbility" : true,
+                    "ARCStatus" : "Off",
+                    "Connected" : [ 
+                        3001, 
+                        3002, 
+                        3003
+                    ],
+                    "Dir" : "in"
+                }
+            ]
+        }, 
+        {
+            "PhyIndex" : 2,
+            "PortType" : "HDMI",
+            "ChannalInfo" : [ 
+                {
+                    "SignalType" : "Video",
+                    "PhyID" : 2,
+                    "Name" : "DVD2",
+                    "HDCPMode" : "1.x",
+                    "HDCPState" : "None",
+                    "SignalStatus" : "On",
+                    "Signal" : "HDMI",
+                    "Resolution" : "1920*1080@60P",
+                    "Connected" : [],
+                    "Mute" : "Off",
+                    "Dir" : "in"
+                }, 
+                {
+                    "SignalType" : "Audio",
+                    "PhyID" : 2002,
+                    "Name" : "DVD2_Audio",
+                    "SignalStatus" : "On",
+                    "SamplingRate" : 48,
+                    "Mute" : "Off",
+                    "ARCAbility" : true,
+                    "ARCStatus" : "Off",
+                    "Connected" : [],
+                    "Dir" : "in"
+                }
+            ]
+        }, 
+        {
+            "PhyIndex" : 3,
+            "PortType" : "HDMI",
+            "ChannalInfo" : [ 
+                {
+                    "SignalType" : "Video",
+                    "PhyID" : 3,
+                    "Name" : "DVD3",
+                    "HDCPMode" : "1.x",
+                    "HDCPState" : "None",
+                    "SignalStatus" : "On",
+                    "Signal" : "HDMI",
+                    "Resolution" : "1920*1080@60P",
+                    "Connected" : [],
+                    "Mute" : "Off",
+                    "Dir" : "in"
+                }, 
+                {
+                    "SignalType" : "Audio",
+                    "PhyID" : 2003,
+                    "Name" : "DVD3_Audio",
+                    "SignalStatus" : "On",
+                    "SamplingRate" : 48,
+                    "Mute" : "Off",
+                    "ARCAbility" : true,
+                    "ARCStatus" : "Off",
+                    "Connected" : [],
+                    "Dir" : "in"
+                }
+            ]
+        }, 
+        {
+            "PhyIndex" : 4,
+            "PortType" : "HDMI",
+            "ChannalInfo" : [ 
+                {
+                    "SignalType" : "Video",
+                    "PhyID" : 4,
+                    "Name" : "DVD4",
+                    "HDCPMode" : "1.x",
+                    "HDCPState" : "None",
+                    "SignalStatus" : "Off",
+                    "Signal" : "",
+                    "Resolution" : "",
+                    "Connected" : [],
+                    "Mute" : "Off",
+                    "Dir" : "in"
+                }, 
+                {
+                    "SignalType" : "Audio",
+                    "PhyID" : 2004,
+                    "Name" : "DVD4_Audio",
+                    "SignalStatus" : "Off",
+                    "SamplingRate" : 0,
+                    "Mute" : "Off",
+                    "ARCAbility" : true,
+                    "ARCStatus" : "Off",
+                    "Connected" : [],
+                    "Dir" : "in"
+                }
+            ]
+        }, 
+        {
+            "PhyIndex" : 5,
+            "PortType" : "HDMI",
+            "ChannalInfo" : [ 
+                {
+                    "SignalType" : "Video",
+                    "PhyID" : 1001,
+                    "Name" : "Room1",
+                    "HDCPMode" : "1.x",
+                    "HDCPState" : "None",
+                    "SignalStatus" : "On",
+                    "Signal" : "HDMI",
+                    "Resolution" : "1920*1080@60P",
+                    "Connected" : 1,
+                    "Mute" : "Off",
+                    "Dir" : "out"
+                }, 
+                {
+                    "SignalType" : "Audio",
+                    "PhyID" : 3001,
+                    "Name" : "Room1_Audio",
+                    "Connected" : 2001,
+                    "SignalStatus" : "On",
+                    "SamplingRate" : 48,
+                    "Mute" : "Off",
+                    "ARCAbility" : true,
+                    "ARCStatus" : "Off",
+                    "Dir" : "out"
+                }
+            ]
+        }, 
+        {
+            "PhyIndex" : 6,
+            "PortType" : "HDMI",
+            "ChannalInfo" : [ 
+                {
+                    "SignalType" : "Video",
+                    "PhyID" : 1002,
+                    "Name" : "Room2",
+                    "HDCPMode" : "1.x",
+                    "HDCPState" : "None",
+                    "SignalStatus" : "On",
+                    "Signal" : "HDMI",
+                    "Resolution" : "1920*1080@60P",
+                    "Connected" : 1,
+                    "Mute" : "Off",
+                    "Dir" : "out"
+                }, 
+                {
+                    "SignalType" : "Audio",
+                    "PhyID" : 3002,
+                    "Name" : "Room2_Audio",
+                    "Connected" : 2001,
+                    "SignalStatus" : "On",
+                    "SamplingRate" : 48,
+                    "Mute" : "Off",
+                    "ARCAbility" : false,
+                    "ARCStatus" : "Off",
+                    "Dir" : "out"
+                }
+            ]
+        }, 
+        {
+            "PhyIndex" : 7,
+            "PortType" : "HDMI",
+            "ChannalInfo" : [ 
+                {
+                    "SignalType" : "Video",
+                    "PhyID" : 1003,
+                    "Name" : "Room3",
+                    "HDCPMode" : "1.x",
+                    "HDCPState" : "None",
+                    "SignalStatus" : "On",
+                    "Signal" : "HDMI",
+                    "Resolution" : "1920*1080@60P",
+                    "Connected" : 1,
+                    "Mute" : "Off",
+                    "Dir" : "out"
+                }, 
+                {
+                    "SignalType" : "Audio",
+                    "PhyID" : 3003,
+                    "Name" : "Room3_Audio",
+                    "Connected" : 2001,
+                    "SignalStatus" : "On",
+                    "SamplingRate" : 48,
+                    "Mute" : "Off",
+                    "ARCAbility" : true,
+                    "ARCStatus" : "Off",
+                    "Dir" : "out"
+                }
+            ]
+        }, 
+        {
+            "PhyIndex" : 8,
+            "PortType" : "HDMI",
+            "ChannalInfo" : [ 
+                {
+                    "SignalType" : "Video",
+                    "PhyID" : 1004,
+                    "Name" : "Room4",
+                    "HDCPMode" : "1.x",
+                    "HDCPState" : "None",
+                    "SignalStatus" : "On",
+                    "Signal" : "DIV",
+                    "Resolution" : "1920*1080@60P",
+                    "Connected" : "",
+                    "Mute" : "Off",
+                    "Dir" : "out"
+                }, 
+                {
+                    "SignalType" : "Audio",
+                    "PhyID" : 3004,
+                    "Name" : "Room4_Audio",
+                    "Connected" : "",
+                    "SignalStatus" : "On",
+                    "SamplingRate" : 48,
+                    "Mute" : "Off",
+                    "ARCAbility" : false,
+                    "ARCStatus" : "Off",
+                    "Dir" : "out"
+                    
+                }
+            ]
+        }, 
+        {
+            "PhyIndex" : 9,
+            "PortType" : "3.5",
+            "ChannalInfo" : [ 
+                {
+                    "SignalType" : "Audio",
+                    "PhyID" : 4001,
+                    "Name" : "mp3",
+                    "SignalStatus" : "On",
+                    "SamplingRate" : 48,
+                    "Mute" : "Off",
+                    "Volume" : 50,
+                    "Balance" : 50,
+                    "DirAbility" : false,
+                    "Dir" : "in",
+                    "Connected" : [ 
+                        5001, 
+                        5002, 
+                        5003
+                    ]
+                }
+            ]
+        }, 
+        {
+            "PhyIndex" : 10,
+            "PortType" : "3.5",
+            "ChannalInfo" : [ 
+                {
+                    "SignalType" : "Audio",
+                    "PhyID" : 4002,
+                    "Name" : "mp4",
+                    "SignalStatus" : "On",
+                    "SamplingRate" : 48,
+                    "Mute" : "Off",
+                    "Volume" : 50,
+                    "Balance" : 50,
+                    "DirAbility" : false,
+                    "Dir" : "in",
+                    "Connected" : []
+                }
+            ]
+        }, 
+        {
+            "PhyIndex" : 11,
+            "PortType" : "3.5",
+            "ChannalInfo" : [ 
+                {
+                    "SignalType" : "Audio",
+                    "PhyID" : 4003,
+                    "Name" : "mp5",
+                    "SignalStatus" : "On",
+                    "SamplingRate" : 48,
+                    "Mute" : "Off",
+                    "Volume" : 50,
+                    "Balance" : 50,
+                    "DirAbility" : false,
+                    "Dir" : "in",
+                    "Connected" : []
+                }
+            ]
+        }, 
+        {
+            "PhyIndex" : 12,
+            "PortType" : "3.5",
+            "ChannalInfo" : [ 
+                {
+                    "SignalType" : "Audio",
+                    "PhyID" : 4004,
+                    "Name" : "mp6",
+                    "SignalStatus" : "On",
+                    "SamplingRate" : 96,
+                    "Mute" : "Off",
+                    "Volume" : 50,
+                    "Balance" : 50,
+                    "DirAbility" : false,
+                    "Dir" : "in",
+                    "Connected" : []
+                }
+            ]
+        }, 
+        {
+            "PhyIndex" : 13,
+            "PortType" : "3.5",
+            "ChannalInfo" : [ 
+                {
+                    "SignalType" : "Audio",
+                    "PhyID" : 5001,
+                    "Name" : "音响1",
+                    "SignalStatus" : "On",
+                    "SamplingRate" : 48,
+                    "Mute" : "Off",
+                    "Volume" : 50,
+                    "Balance" : 50,
+                    "DirAbility" : false,
+                    "Dir" : "out",
+                    "Connected" : 4001
+                }
+            ]
+        }, 
+        {
+            "PhyIndex" : 14,
+            "PortType" : "3.5",
+            "ChannalInfo" : [ 
+                {
+                    "SignalType" : "Audio",
+                    "PhyID" : 5002,
+                    "Name" : "音响2",
+                    "SignalStatus" : "On",
+                    "SamplingRate" : 48,
+                    "Mute" : "Off",
+                    "Volume" : 50,
+                    "Balance" : 50,
+                    "DirAbility" : false,
+                    "Dir" : "out",
+                    "Connected" : 4001
+                }
+            ]
+        }, 
+        {
+            "PhyIndex" : 15,
+            "PortType" : "3.5",
+            "ChannalInfo" : [ 
+                {
+                    "SignalType" : "Audio",
+                    "PhyID" : 5003,
+                    "Name" : "音响3",
+                    "SignalStatus" : "On",
+                    "SamplingRate" : 48,
+                    "Mute" : "Off",
+                    "Volume" : 50,
+                    "Balance" : 50,
+                    "DirAbility" : false,
+                    "Dir" : "out",
+                    "Connected" : 4001
+                }
+            ]
+        }, 
+        {
+            "PhyIndex" : 16,
+            "PortType" : "3.5",
+            "ChannalInfo" : [ 
+                {
+                    "SignalType" : "Audio",
+                    "PhyID" : 5004,
+                    "Name" : "音响4",
+                    "SignalStatus" : "On",
+                    "SamplingRate" : 48,
+                    "Mute" : "Off",
+                    "Volume" : 50,
+                    "Balance" : 50,
+                    "DirAbility" : false,
+                    "Dir" : "out",
+                    "Connected" : ""
+                }
+            ]
+        }
+    ],
+    "CareInfo" : {}
+}

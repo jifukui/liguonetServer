@@ -1,0 +1,27 @@
+{
+    "Authentication":
+    {
+        "UserName":"admin",
+        "Password":"123456",
+        "SessionId":""
+    },
+    "data":
+    {
+        "ComamndType":"Authentication",
+        "CommandData":{
+            "UserName":"admin",
+            "Password":"123456"
+        }
+    },
+    "Protocol":
+    {
+        "Name":"liguoNetWork",
+        "Version":"1.0.0"   
+    },
+    "JSON":
+    {
+        "Version":"1.0.0"
+    },
+    "request":"123456",
+    "timestamp":"1234567891234"
+}

@@ -1,0 +1,65 @@
+var Device={};
+Device.Database=require("../database/liguodatabase");
+Device.GetDevicelist=function(value,data)
+{
+    value.data.push(data);
+}
+Device.SetDeviceName=function(value,res,key,name,liguo)
+{
+    Device.Database.database.SetDeviceName(value,res,key,name,liguo);
+}
+Device.SetDHCPStatus=function(value,res,key,DHCP,liguo)
+{
+    Device.Database.database.SetDHCPStatus(value,res,key,DHCP,liguo);
+}
+Device.SetNetwork=function(value,res,key,network,liguo)
+{
+    Device.Database.database.SetNetwork(value,res,key,network,liguo);
+}
+Device.SetChannalName=function(value,res,key,channal,name,liguo)
+{
+    //console.log("切换设置的设备处理过程");
+    Device.Database.database.SetChannalName(value,res,key,channal,name,liguo);
+}
+Device.SetRoutChannal=function(value,res,key,data,liguo)
+{
+    Device.Database.database.SetRoutChannal(value,res,key,data,liguo);
+}
+Device.SetMacroName=function(value,res,key,oldname,newname,liguocommand)
+{
+    Device.Database.database.SetMacroName(value,res,key,oldname,newname,liguocommand);
+}
+Device.AddMacro=function(value,res,key,macro,liguocommand)
+{
+    console.log("The macro is "+JSON.stringify(macro));
+    console.log("The Key is "+key);
+    Device.Database.database.AddMacro(value,res,key,macro,liguocommand);
+}
+Device.DeleteMacro=function(value,res,key,name,liguocommand)
+{
+    Device.Database.database.DeleteMacro(value,res,key,name,liguocommand);
+}
+Device.UpdateMacro=function(value,res,key,macro,liguocommand){
+    console.log("The macro is "+JSON.stringify(macro));
+    Device.Database.database.UpdateMacro(value,res,key,macro,liguocommand)
+}
+Device.RunMacro=function(value,res,key,name,liguocommand){
+    Device.Database.database.RunMacro(value,res,key,name,liguocommand);
+}
+Device.SetVideoInfo=function(value,res,key,PHYID,videoInfo,liguocommand)
+{
+    Device.Database.database.SetVideoInfo(value,res,key,PHYID,videoInfo,liguocommand)
+}
+Device.SetAudioInfo=function(value,res,key,PHYID,audioInfo,liguocommand)
+{
+    Device.Database.database.SetAudioInfo(value,res,key,PHYID,audioInfo,liguocommand);
+}
+Device.SetChannalInfo=function(value,res,key,PHYID,ChannalInfo,liguocommand)
+{
+    Device.Database.database.SetChannalInfo(value,res,key,PHYID,ChannalInfo,liguocommand);
+}
+Device.SetRoutEDID=function(value,res,key,EDID,liguocommand)
+{
+    Device.Database.database.SetRoutEDID(value,res,key,EDID,liguocommand);
+}
+exports.Device=Device;

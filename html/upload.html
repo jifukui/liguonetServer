@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上传文件</title>
+    <script src="jquery-3.3.1.js"></script>
+    <script src="axios.js"></script>
+    <script>
+        var  getfileInfo=function() {
+            var value={};
+            var message={};
+            var file =document.getElementById("file").files[0];
+            console.log(file);
+            message.name=file.name;
+            message.type=file.type;
+            message.module="VS-88UHDA";
+            var reader;
+            reader = new FileReader();
+            if(file.type=="text/plain")
+            {
+                reader.readAsText(file);
+            }
+            else
+            {
+                reader.readAsBinaryString(file);
+                //reader.readAsArrayBuffer(file);
+                //reader.readAsDataURL(file);
+            }
+            reader.onprogress=function () {
+                console.log("read file")
+            };
+            reader.onload= function () {
+                console.log("read file over")
+                //console.log(this.result);
+                if(message=="text/plain")
+                {
+                    message.data=this.result;
+                }
+                else
+                {
+                    message.data=this.result;
+                    //message.data = new Uint8Array( this.result);
+                    //message.data=message.data.join("");
+                    //message.data=new Blob(["0123456789"],{type:message.type});
+                    //console.log(message.data);
+                }
+                value.data=[
+                    {
+                    "CommandType":"up",
+                    "CommandData":{
+                        "CommandName":"FileUpload",
+                        "data":message
+                    }},
+                ];
+                //console.log("The value is "+JSON.stringify(value));
+                axios.post('/cmd',value).then(function(msg){
+                if (msg.status == "success") {
+                        console.log("good for this ")    
+                }
+                else 
+                {
+                    console.log("The value is "+msg.status);
+                }
+                })
+            };
+            reader.onerror=function (e) {
+                console.log("The error is ");
+            };
+            value.Authentication={
+            "UserName":"admin",
+            "SessionId":"1536894963595"
+            };
+            value.data=[];
+            value.Protocol={
+                "Name":"liguoNetWork",
+                "Version":"1.0.0"
+            };
+            value.JSON={
+                "Version":"1.0.0"
+            };
+            value.datalen=1;
+            value.request=132456789;
+            value.timestamp=123465798245;
+    }
+        </script>
+</head>
+<body>
+    上传文件
+    <input type="file" name="inputFile" id="file"><input type="button" value="上传" onclick="getfileInfo()">
+</body>
+</html>

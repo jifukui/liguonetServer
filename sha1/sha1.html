@@ -1,0 +1,10 @@
+<body>
+<script type="text/javascript" src="sha1.js"></script>
+<input type="file" id="f" onchange="c()" />
+<script type="text/javascript" >
+	function c(){
+		var file = document.getElementById("f").files[0]
+		sha1File(file);
+	}
+</script>
+</body>

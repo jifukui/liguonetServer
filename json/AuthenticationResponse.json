@@ -1,0 +1,12 @@
+{
+    "status":"success",
+    "data":
+    {
+        "SessionID":"1234567891234"
+    },
+    "error":
+    {
+    },
+    "responseID":"123456",
+    "timestamp":"123456789123"
+}
