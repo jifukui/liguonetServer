@@ -492,43 +492,6 @@ var CommandHandler=function(req,res,value,base,index)
             }
             break;
         }
-        case "VideoInfo":
-        {
-            if(req.body.data[index].CommandType=="set")
-            {
-                liguocommand.IsReturn=true;
-                var key="1";
-                var PHYID="0";
-                var videoInfo={};
-                PHYID=req.body.data[index].CommandData.PhyID;
-                key=req.body.data[index].CommandData.key;                
-                videoInfo=req.body.data[index].CommandData.ChannalInfo[i]                
-                liguocommand.DeviceManage.Device.SetVideoInfo(value,res,key,PHYID,videoInfo,liguocommand);
-            }
-            else
-            {
-                error=liguocommand.Error.ErrorStr.Cmd.command.nothiscmd;
-            }
-            break;
-        }
-        case  "AudioInfo":
-        {
-            if(req.body.data[index].CommandType=="set")
-            {
-                liguocommand.IsReturn=true;
-                var key="1";
-                var PHYID="0";
-                var audioInfo={};
-                PHYID=req.body.data[index].CommandData.PhyID;
-                key=req.body.data[index].CommandData.key;
-                liguocommand.DeviceManage.Device.SetAudioInfo(value,res,key,PHYID,audioInfo,liguocommand);
-            }
-            else
-            {
-                error=liguocommand.Error.ErrorStr.Cmd.command.nothiscmd;
-            }              
-            break;
-        }
         case "ChannalInfo":
         {
             console.log("设置通道信息");
