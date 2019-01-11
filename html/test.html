@@ -7,46 +7,22 @@
     <script src="axios.js"></script>
     <script>
         var value={};
-        value.Authentication={
-            "UserName":"jifukui",
-            "SessionId":""
-        };
-        value.data=[
-            {
-            "CommandType":"Authentication",
-            "CommandData":{
-                UserName:"jifukui",
-                Password:"12345678"
-            }},
-        ];
-        value.Protocol={
-            "Name":"liguoNetWork",
-            "Version":"1.0.0"
-        };
-        value.JSON={
-            "Version":"1.0.0"
-        };
-        value.datalen=value.data.length;
-        value.request=132456789;
-        value.timestamp=123465798245;
+		value.data="version";
         function test()
         {
-            /*$.ajax({
-                type: 'post',
-                url: '/cmd',
-                data: value,
-                dataType: 'json',
-                success: function (msg) {
-                    if (msg.status == "success") {
+            axios.get('/cgi-bin/hello.cgi',{params:{update:value}}).then(function(msg){
+			if (msg.status == "success") {
                             console.log("good for this ")    
                     }
                     else {
                         console.log("The value is "+msg.status);
                     }
-                }
-            })*/
-            axios.post('/cmd',value).then(function(msg){
-                if (msg.status == "success") {
+            })
+        }
+		function test1()
+        {
+            axios.post('/cgi-bin/hello.cgi',value).then(function(msg){
+			if (msg.status == "success") {
                             console.log("good for this ")    
                     }
                     else {
@@ -60,9 +36,12 @@
 </head>
 <body>
 <div>
-    哈哈哈哈哈哈 for test
-    <input type="button" onclick="test()" value="点击发送命令">
+    liguo WebServer for test  Get Command
+    <input type="button" onclick="test()" value="点击发送Get命令">
 </div>
-
+<div>
+    liguo WebServer for test Post Command
+    <input type="button" onclick="test1()" value="点击发送Post命令">
+</div>
 </body>
 </html>

@@ -327,6 +327,8 @@ liguodatabase.DeviceInfo=function(module,key,res,liguo,value){
                 {
                     //console.log("The data [0] is "+JSON.stringify(data1[0]));
                     var test1;
+                    data.BaseInfo.DefaultEDID=data1[0].DefaultEDID;
+                    console.log("The default EDID is "+data1[0].DefaultEDID);
                     data["产品简介"]=data1[0]["产品简介"];
                     data["产品特性"]=data1[0]["产品特性"];
                     data.PhotoURL=data1[0].PhotoURL;
@@ -931,7 +933,7 @@ liguodatabase.SetRoutEDID=function(value,res,key,EDID,liguo)
     }
     else
     {
-        var sdata=liguo.DeviceInfo[key];
+        var sdata=liguo.DeviceInfo[key].data;
         var data="";
         switch(EDID.mode)
         {
@@ -947,7 +949,8 @@ liguodatabase.SetRoutEDID=function(value,res,key,EDID,liguo)
             }
             case "Default":
             {
-                data=defaultedid;
+                //data=defaultedid;
+                data=sdata.BaseInfo.DefaultEDID;
                 break;
             }
             case "File":
@@ -960,13 +963,14 @@ liguodatabase.SetRoutEDID=function(value,res,key,EDID,liguo)
         console.log("teh data is "+JSON.stringify(data));
         var i;
         var dbo=liguodatabase.database.db(database);
-        dbo.collection("EDID").updateMany({"PortIndex":{$in:EDID.Out}},{$set:{"EDID":data}},function(err,doc){
+        dbo.collection("EDID").updateMany({"PortIndex":{$in:EDID.Out},"key":key},{$set:{"EDID":data}},function(err,doc){
             if(err)
             {
                 console.log("Have error for EDID Update "+err);
             }
             else
             {
+                liguo.DeviceInfo[key].change=true;
                 value.status="success";
                 console.log("The mactch is "+doc.matchedCount);
                 res.send(value);
